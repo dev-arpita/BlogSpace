@@ -10,9 +10,16 @@
     <body>
         <header>
             <nav class="nav">
-                <h3 class="nav-title">BlogSpace</h3>
+                <h3>BlogSpace</h3>
             </nav>
         </header>
+        <form>
+            <label for="post-title">Title</label>
+            <input type="text" id="post-title" />
+            <label for="post-post">Posts</label>
+            <textarea id="post-post" name="post-post" rows="4" cols="50"></textarea>
+            <button type="submit">POST</button>
+        </form>
         <div id="blog-list"></div>
         <script src="index.js"></script>
     </body>
