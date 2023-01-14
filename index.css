@@ -1,32 +1,33 @@
-html {
-    font-size: 62.5%;
-}
-
 body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.blog-sec {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem;
     background: lavender;
 }
 
+.nav {
+    height: 30px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: #490249;
+    padding: 10px;
+}
+
+.nav-title {
+    margin-top: 0;
+    color: #fff;
+}
+
+#blog-list {
+    padding: 50px 10px;
+}
+
 h3 {
-    font-size: 2.2rem;
-    color: darkcyan;
+    color: #3e5b66;
+    font-family: 'Roboto Mono', monospace;
 }
 
 p {
-    font-size: 1.6rem;
-    margin-top: 0;
-    color: #500;
-}
-
-hr {
-    width: 100%;
+    color: #1f2121;
 }
