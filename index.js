@@ -1,3 +1,4 @@
+const blogList = document.getElementById("blog-list")
 fetch("https://apis.scrimba.com/jsonplaceholder/posts")
     .then(res => res.json())
     .then(data => {
@@ -10,7 +11,7 @@ fetch("https://apis.scrimba.com/jsonplaceholder/posts")
                 <hr />
             `
         }
-        document.getElementById("blog-list").innerHTML = html
+    blogList.innerHTML= html
     })
 
 document.getElementById("new-post").addEventListener("submit", function(e) {
@@ -22,22 +23,28 @@ document.getElementById("new-post").addEventListener("submit", function(e) {
         body: postBody
     }
 
-    fetch("https://apis.scrimba.com/jsonplaceholder/posts", {
+    const options = {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json"
         }
-    })
-    .then(res => res.json())
-    .then( data => console.log(data))
-    /**
-     * Challenge: Send this off to the server!
-     *
-     * 1. BaseURL: https://apis.scrimba.com/jsonplaceholder/
-     * 2. Endpoint: /posts
-     * 3. method: ???
-     * 4. Request body: ??? (Remember to turn it into JSON)
-     * 5. Headers: ??? (Check the JSON Placeholder API docs or past casts for help)
-     */
+    }
+
+    fetch("https://apis.scrimba.com/jsonplaceholder/posts", options)
+        .then(res => res.json())
+        .then(post => {
+            const newPost = `
+                <h3>${post.title}</h3>
+                <p>${post.body}</p>
+                <hr />
+
+            `
+
+
+            blogList.innerHTML =`${newPost}
+
+             ${blogList.innerHTML}`
+            })
+
 })
