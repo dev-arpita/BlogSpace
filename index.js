@@ -47,6 +47,8 @@ form.addEventListener("submit", function(e) {
             /**
              * Challenge: clear the form out!
              */
+            // titleInput.value = ""
+            // bodyInput.value = ""
             form.reset()
 
         })
