@@ -6,4 +6,4 @@
    JSON data
 
 3. What kind of client devices can make use of a RESTful API?
-   ALL OF THEM.
+   ALL OF THEM. any device that connected to internet use REST-ful APIs, server collecting data / sending data.
