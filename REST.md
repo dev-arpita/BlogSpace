@@ -1,9 +1,43 @@
-1. How would you describe what REST is to your non-technical friend?
-   A standarized way to have your computer, like your laptop,
-   get or send information to another computer (like a server)
+1. What does it mean for the server to be "Stateless"?
+   It forgets the interaction after the response is sent.
 
-2. What does a RESTful API usually return in response to incoming requests?
-   JSON data
+- In the Mike's Bikes example, what URL endpoint (and request method)
+  would you expect to use in order to accomplish the following:
 
-3. What kind of client devices can make use of a RESTful API?
-   ALL OF THEM. any device that connected to internet use REST-ful APIs, server collecting data / sending data.
+  2. Retrieve a list of all the bikes that are sold?
+     GET /bikes
+
+  3. Retrieve detailed information about the bike with an ID of 42?
+     GET /bikes/42
+
+  4. Update the price of the bike with an ID of 21?
+     PUT /bikes/21
+
+  5. Add a new bike to the list of bikes being sold?
+     POST /bikes
+
+  6. Remove the bike with an ID of 56 from the list of bikes?
+     DELETE /bikes/56
+
+//My Solution
+
+1. What does it mean for the server to be "Stateless"?
+   Stateless means, every request would be treated as a new request. Server don't retain any information of Clients request or any data for multiple calls.
+
+- In the Mike's Bikes example, what URL endpoint (and request method)
+  would you expect to use in order to accomplish the following:
+
+  2. Retrieve a list of all the bikes that are sold?
+     GET /bikes
+
+  3. Retrieve detailed information about the bike with an ID of 42?
+     GET /bikes/42
+
+  4. Update the price of the bike with an ID of 21?
+     PUT /bikes/21
+
+  5. Add a new bike to the list of bikes being sold?
+     POST /bikes
+
+  6. Remove the bike with an ID of 56 from the list of bikes?
+     DELETE /bikes/56
